@@ -1,0 +1,124 @@
+### REGISTER USER API
+POST http://localhost:8000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "coba1",
+    "email" : "coba1@gmail.com",
+    "password" : "cobacoba",
+    "name" : "Coba 1"   
+}
+
+### LOGIN USER API
+POST http://localhost:8000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "coba1",
+    "email" : "coba1@gmail.com",
+    "password" : "cobacoba"
+}
+
+### GET CURRENT USER API
+GET http://localhost:8000/api/users/getupdate
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Accept: application/json
+
+### UPDATE CURRENT USER API
+PATCH http://localhost:8000/api/users/getupdate
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name" : "Coba Sek Rek 1"
+}
+
+### GET PEMASUKAN TERBARU
+GET http://localhost:8000/api/incomes
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Accept: application/json
+
+### POST PEMASUKAN TERBARU
+POST http://localhost:8000/api/incomes
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "type": "Gaji",
+  "amount": 1500000,
+  "description": "Gaji bulan Mei",
+  "income_date": "2024-03-7"
+}
+
+### UPDATE PEMASUKAN
+PUT http://localhost:8000/api/incomes/3
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Content-Type: application/json
+Accept: application/json
+
+{ 
+    "type": "Gaji",
+    "amount": 1500000,
+    "description": "Gaji bulan Mei",
+    "income_date": "2024-05-17"
+}
+
+### FILTER TANGGAL PEMASUKAN
+GET http://localhost:8000/api/incomes/filter?start_date=2024-04-17&end_date=2024-05-18
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Accept: application/json
+
+### HAPUS PEMASUKAN
+DELETE http://localhost:8000/api/incomes/3
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Accept: application/json
+
+### GET PENGELUARAN TERBARU
+GET http://localhost:8000/api/expenses
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Accept: application/json
+
+### POST PENGELUARAN TERBARU
+POST http://localhost:8000/api/expenses
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "type": "Beli HP",
+  "amount": 4000000,
+  "description": "beli HP POCO",
+  "expense_date": "2024-04-20"
+}
+
+### UPDATE PENGELUARAN
+PUT http://localhost:8000/api/expenses/1
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Content-Type: application/json
+Accept: application/json
+
+{ 
+    "type": "Beli Skincare",
+    "amount": 300000,
+    "description": "beli skincare Wardah",
+    "expense_date": "2024-04-16"
+}
+
+### FILTER TANGGAL PENGELUARAN
+GET http://localhost:8000/api/expenses/filter?start_date=2024-04-20&end_date=2024-05-10
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Accept: application/json
+
+### HAPUS PENGELUARAN
+DELETE http://localhost:8000/api/expenses/3
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Accept: application/json
+
+### LOGOUT USER API
+DELETE http://localhost:8000/api/users/logout
+Authorization: 150c021a-5a9d-4cb3-8037-9ae105315aa1
+Accept: application/json
