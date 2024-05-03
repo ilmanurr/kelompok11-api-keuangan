@@ -33,7 +33,7 @@ cp .env.example .env
 php artisan migrate
 ```
 
-6. Jika belum membuat database, akan muncul pertanyaan “The database 'budget_app' does not exist on the 'mysql' connection.  Would you like to create it? (yes/no)” kemudian ketik “yes”.
+6. Jika belum membuat database, akan muncul pertanyaan “The database 'budget_app' does not exist on the 'mysql' connection.  Would you like to create it? (yes/no)” kemudian ketik `yes`.
 
 7. Generate APP_KEY dengan perintah :
 ```bash
